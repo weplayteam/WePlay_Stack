@@ -1,0 +1,14 @@
+{
+  "name": "weplay_server",
+  "version": "1.0.0",
+  "description": "server application for both the backend and frontend of weplay",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weplay"
+  ],
+  "author": "WePlay",
+  "license": "MIT"
+}
