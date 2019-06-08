@@ -10,6 +10,7 @@ import SignupPage from './pages/SignupPage';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import LoginPage from './pages/LoginPage';
+import P2PPage from './pages/P2PPage';
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
           </Route>
           <Route exact path="/signup">
             <SignupPage />
+          </Route>
+          <Route exact path="/p2p">
+            <P2PPage />
           </Route>
         </Switch>
       </Router>
