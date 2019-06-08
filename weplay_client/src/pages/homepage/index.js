@@ -9,7 +9,7 @@ export default class HomePage extends Component {
     render() {
 
         const { user } = this.props;
-
+ 
         return (
             <div>
                 <p>User: {user.name}</p>

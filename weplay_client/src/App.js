@@ -6,26 +6,40 @@ import {
   Link
 } from "react-router-dom";
 
-import HomePage from "./pages/homepage";
-import AboutPage from "./pages/aboutpage";
+import SignupPage from './pages/SignupPage';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App font-sans bg-gray-100 min-h-screen">
       <Router>
-        <header className="App-header">
-          {"This is the main app components"}
+        <header className={`App-header bg-black text-white p-4 flex flex-row items-center`} >
+          <span className={`text-3xl w-24 mr-12`}>Weplay</span>
+          <div className={`flex flex-row justify-between w-full`}>
+          <ul className={`flex flex-row`}>
+            <li className={`mr-4`}><Link to="/">Home</Link></li>
+            <li ><Link to="/about">About</Link></li>
+          </ul>
+          <ul className={`flex flex-row`}>
+            <li className={`mr-4`}> <Link to="/login">Login</Link> </li>
+            <li> <Link to="/signup">Signup</Link> </li>
+          </ul>
+          </div>
         </header>
-        <ul>
-          <li><Link to="/">home</Link></li>
-          <li><Link to="/about">about</Link></li>
-        </ul>
         <Switch>
           <Route exact path="/">
             <HomePage user={{ name: "akash" }} />
           </Route>
           <Route exact path="/about">
             <AboutPage user={{ name: "akash" }} />
+          </Route>
+          <Route exact path="/login">
+            <LoginPage />
+          </Route>
+          <Route exact path="/signup">
+            <SignupPage />
           </Route>
         </Switch>
       </Router>
