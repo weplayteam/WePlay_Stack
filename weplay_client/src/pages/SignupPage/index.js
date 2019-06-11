@@ -6,11 +6,11 @@ export default class SignupPage extends Component {
     render() {
 
         return (
-            <div className={`my-24`}>
+            <div className={`mt-24`}>
                 <div className={`flex flex-row justify-center`}>
                     <form className={`p-12 bg-white rounded shadow-lg rounded`}>
                         <label >{"First name: "}</label>
-                        <br />                        
+                        <br />
                         <input placeholder={`First name`} className={`w-64 my-6 bg-gray-100 p-4`} type="text"></input>
                         <br />
                         <label>{"Last name: "}</label>

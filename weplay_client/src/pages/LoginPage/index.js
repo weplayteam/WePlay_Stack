@@ -5,7 +5,7 @@ export default class LoginPage extends Component {
 
     render() {
         return (
-            <div className={`my-24`}>
+            <div className={`mt-24`}>
                 <div className={`flex flex-row justify-center`}>
                     <form className={`p-12 bg-white rounded shadow-lg rounded`}>
                         <label className={`my-6`}>{"Username or e-mail"}</label>

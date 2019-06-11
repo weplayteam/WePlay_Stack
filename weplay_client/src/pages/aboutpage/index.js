@@ -15,7 +15,7 @@ export default class AboutPage extends Component {
 
     render() {
         return (
-            <div className={`m-24`}>
+            <div className={`mt-24`}>
                 <div>
                     <h1 className={`text-2xl`}>About us!</h1>
                     <p>We are a tight, niche group of young entrepreneurs. Our shared values and beliefs influence the work that we do, along with the positive impact we hope to instill in communities.

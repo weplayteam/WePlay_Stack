@@ -1,32 +1,44 @@
 import React, { Component } from 'react'
-import { CardElement, injectStripe } from 'react-stripe-elements'
+import {
+    CardElement, injectStripe,
+    CardNumberElement, CardExpiryElement, CardCVCElement,
+    PostalCodeElement, PaymentRequestButtonElement,
+    Elements
+} from 'react-stripe-elements'
 
 class CheckoutForm extends Component {
+
+    onPaymentSubmitClcik(ev) {
+        console.log("payment submission started!");
+    }
+
     render() {
 
         const {
-            price
-        }  = this.props;
+            price,
+            paymentRequest
+        } = this.props;
 
         return (
-            <div>
-                <CardElement></CardElement>
-                <button className={`btn btn-blue  px-4`} type="submit" onClick={async (ev) => {
-                    console.log("submitted the request! ")
-                    console.log(ev)
-
-                    let { token } = await this.props.stripe.createToken({ name: "Name" });
-                    let response = await fetch("/charge", {
-                        method: "POST",
-                        headers: { "Content-Type": "text/plain" },
-                        body: token.id
-                    });
-
-                    if (response.ok) console.log("Purchase Complete!")
-                }}>
-                    <span  className={`mx-6`}>Pay ${price}</span>
+            <form action="/charge" method="POST">
+                {/* <CardNumberElement />
+                <CardExpiryElement />
+                <CardCVCElement /> */}
+                <label className={`text-indigo-600`}>Debit or Credit card</label>
+                <div className={`py-4 px-2 mt-2 border-solid border rounded-sm border-indigo-600 shadow-inner shadow-lg`}>
+                    <CardElement />
+                </div>
+                <hr />
+                {
+                    !paymentRequest.canMakePayment() ?
+                        <PaymentRequestButtonElement paymentRequest={paymentRequest} /> : <div />
+                }
+                <br />
+                <button className={`btn btn-indigo  px-4`} type="submit" onClick={this.onPaymentSubmitClcik}>
+                    <span className={`mx-6`}>Pay ${price}</span>
                 </button>
-            </div>
+
+            </form>
         )
     }
 }
