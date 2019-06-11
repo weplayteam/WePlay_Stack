@@ -14,9 +14,9 @@ import P2PPage from './pages/P2PPage';
 
 function App() {
   return (
-    <div className="App font-sans bg-gray-100 min-h-screen">
+    <div className="font-sans bg-gray-100 min-h-screen">
       <Router>
-        <header className={`App-header bg-black text-white p-4 flex flex-row items-center`} >
+        <header className={`bg-black text-white p-4 flex flex-row items-center`} >
           <span className={`text-3xl w-24 mr-12`}>Weplay</span>
           <div className={`flex flex-row justify-between w-full`}>
             <ul className={`flex flex-row`}>

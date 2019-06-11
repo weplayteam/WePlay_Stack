@@ -25,7 +25,7 @@ export default class SignupPage extends Component {
                         <br />
                         <input placeholder={`password`} className={`w-64 my-6 bg-gray-100 p-4`} type="password"></input>
                         <br />
-                        <button type="submit" className={`btn btn-blue w-full`}>Signup</button>
+                        <button type="submit" className={`btn btn-indigo w-full`}>Signup</button>
                     </form>
                 </div>
             </div>

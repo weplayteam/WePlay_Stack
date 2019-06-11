@@ -16,7 +16,7 @@ export default class LoginPage extends Component {
                         <br />
                         <input className={`w-64 my-6 bg-gray-100 p-4`} placeholder={`password`} type="text"></input>
                         <br />
-                        <button type="submit" className={`btn btn-blue w-full`}>login</button>
+                        <button type="submit" className={`btn btn-indigo w-full`}>login</button>
                     </form>
                 </div>
             </div>
