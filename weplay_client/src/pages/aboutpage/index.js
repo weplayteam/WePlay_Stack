@@ -29,7 +29,7 @@ export default class AboutPage extends Component {
 
 
 </p>
-                </div>˝
+                </div>
                 <br />
                 <div>
                     <h2 className={`text-2xl`}>Meet the team</h2>
